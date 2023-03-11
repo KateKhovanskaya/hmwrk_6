@@ -13,4 +13,13 @@ def arithmetic_progression(first: int,
     2) разность
     3) количество элементов"""
 
-    pass
+    rez_list = list()
+    for i in range(1, quantity+1):
+        rez_list.append(first + (i-1) * diff)
+    return rez_list
+
+
+first = int(input("Введите стартовое число: "))
+diff = int(input("Введите разность прогрессии: "))
+quantity = int(input("Введите количество членов прогрессии: "))
+print(arithmetic_progression(first, diff, quantity))
